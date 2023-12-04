@@ -62,6 +62,9 @@ int main() {
                 break;
             } else {
                 for (int j = 0; j < 9; j++) {
+                    if (line[i] != digits[j][characters[j].value]) {
+                        characters[j].value = 0;
+                    }
                     if (line[i] == digits[j][characters[j].value]) {
                         characters[j].value++;
                         if (characters[j].value == characters[j].key) {
@@ -69,9 +72,7 @@ int main() {
                             flag = 1;
                             break;
                         }
-                    } else {
-                        characters[j].value = 0;
-                    }
+                    } 
                 } 
             }
         }
@@ -93,6 +94,11 @@ int main() {
                 break;
             } else {
                 for (int j = 0; j < 9; j++) {
+
+                    if (line[i] != digits[j][characters[j].value]) {
+                        characters[j].value = characters[j].key - 1;;
+                    }
+
                     if (line[i] == digits[j][characters[j].value]) {
                         characters[j].value--;
                         if (characters[j].value < 0) {
@@ -100,8 +106,6 @@ int main() {
                             flag = 1;
                             break;
                         }
-                    } else {
-                        characters[j].value = characters[j].key-1;
                     }
                 } 
             }
