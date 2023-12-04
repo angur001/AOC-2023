@@ -2,5 +2,5 @@
 
 Commiting to the Advent of code 2023: 
 
-The repo should have working solutions to all the problems in C. \\
+The repo should have working solutions to all the problems in C.  
 The solutions are not guarenteed to be optimal.
